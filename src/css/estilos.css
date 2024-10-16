@@ -1,0 +1,201 @@
+.cartao-banner {
+    position: absolute;
+    top: 40px;
+    left: 78%;
+    transform: translateX(-45%);
+    width: 90%;
+    
+}
+
+.main-SAO {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+    transform: translateY(13%);
+}
+
+.cartao-SAO {
+    display: none;
+    max-width: 360px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cartao-SAO.aberto {
+    display: block;
+}
+
+.cartao-SAO img {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.cartao-SAO .cartao-topo {
+    padding: 30px 40px 0;
+}
+
+.cartao-SAO .nome {
+    margin-bottom: 5px;
+}
+
+.cartao-SAO .tipo {
+    background-color: #ffffff;
+    font-size: 12px;
+    opacity: 0.7;
+    color: #000000;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.cartao-SAO .detalhes {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartao-SAO .cartao-informacoes {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-top: 2px solid #f0b16b; /* Highlight the border with a color */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.cartao-SAO .cartao-informacoes h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color:  #333; /* Change header color */
+    text-align: center; /* Center align */
+}
+
+.cartao-SAO .cartao-informacoes .descricao {
+    padding: 0 10px;
+    font-size: 14px;
+    max-height: 150px;
+    overflow-y: auto; /* Add scroll if text overflows */
+    color: #333; /* Darker color for description for readability */
+
+}
+
+.tipo-Espadachim1 {
+    background-color: #070604;
+}
+
+.tipo-Espadachim2 {
+    background-color: #f15000d2;
+}
+
+.tipo-Espadachim6 {
+    background-color: #015C98;
+}
+
+.tipo-Espadachim4 {
+    background-color: #49D0B0;
+}
+
+.tipo-Espadachim3 {
+    background-color: #BA68C8;
+}
+
+.tipo-Espadachim5 {
+    background-color: #C29791;
+}
+
+.listagem {
+    max-width: 220px;
+    padding-top: 50px;
+}
+
+.listagem .SAO img {
+    width: 30%;
+}
+
+.listagem .SAO {
+    background-color: #ffffff;
+    color: #000000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    min-height: 70px;
+
+    transition: 0.15 ease-in-out;
+}
+
+.listagem .SAO:hover {
+    transform: scale(1.05);
+}
+
+.listagem .SAO span {
+    padding-right: 50px;
+}
+
+.listagem .SAO.ativo {
+    background-color: #ffe8e8;
+}
+
+.nav-aincrad {
+    padding-right: 25px;
+    padding-top: auto;
+}
+
+/* Special Teyvat button */
+.aincrad-button {
+
+    display: inline-block;
+    background-color: #c2f8f583; /* Light cyan background */
+    color: #f2feffd7;
+    padding: 16px 40px;
+    border-radius: 60px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 25px rgba(0, 255, 255, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    position: relative;
+    overflow: hidden;
+}
+
+.aincrad-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30%;
+    width: 150%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
+    transition: transform 0.5s ease;
+    transform: translateX(-200%) translateY(-50%);
+    z-index: 1;
+}
+
+.aincrad-button:hover::before {
+    transform: translateX(100%) translateY(-50%);
+}
+
+.aincrad-button:hover {
+    background-color: #9de9e383;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 10px 35px rgba(133, 236, 193, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.3);
+    z-index: 2;
+}
+
+.aincrad-button:active {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 200, 150, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
